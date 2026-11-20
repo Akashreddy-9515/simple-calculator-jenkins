@@ -41,7 +41,7 @@ pipeline {
     stage('SonarQube Analysis') {
             steps {
                 echo 'Starting SonarQube analysis'
-                withSonarQubeEnv('SonarQube-Local') {
+                withSonarQubeEnv('SonarQube') {
                     bat 'mvn sonar:sonar'
                 }
             }
